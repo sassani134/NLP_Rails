@@ -1,0 +1,59 @@
+<div
+  id="blog"
+  data-controller="blog"
+  class="grid grid-cols-2  gap-5 px-5 justify-center align-center h-screen w-screen"
+  >
+
+  <div class="bg-red-600 h-screen"
+  data-action="blog#connect"
+  >
+    <div>
+      <div
+        class="overflow-hidden rounded-lg border border-gray-200 shadow-sm focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600"
+      >
+        <textarea
+          id="OrderNotes"
+          data-blog-target="formInput"
+          data-action="keyup->blog#update"
+          class="w-full resize-none border-none align-top focus:ring-0 sm:text-sm "
+          rows="4"
+          placeholder="Entrer du texte..."
+        ></textarea>
+
+            <div class="flex items-center justify-end gap-2 bg-white p-3">
+      <button
+        type="button"
+        class="rounded bg-red-200 px-3 py-1.5 text-sm font-medium text-gray-700 hover:text-gray-600"
+        data-blog-target="fetchButton"
+        data-action="click->blog#fetcher"
+      >
+        Fetch
+      </button>
+      </div>
+      </div>
+      <%# <p data-blog-target="titleResponse" class=" text-black"> %>
+    </div>
+  </div>
+
+  <div class="bg-green-600 h-screen">
+    <h1 class="text-5xl text-center text-white">NLPRails</h1>
+    <div>
+      <p data-blog-target="titleHolder" class="text-black"></p>
+    </div>
+  </div>
+
+  <%# <div class="absolute top-1 right-1 bg-violet-900 ring-4 ring-yellow-500">
+    <label for="tokenApi" class="block text-sm font-medium text-white">Clé Token API</label>
+    <h2 class="bg-violet-900">API Token<h2>
+        <textarea
+          id="tokenApi"
+          data-blog-target="tokenForm"
+          class="w-min resize-none border-none align-top focus:ring-0 sm:text-sm bg-violet-900"
+          rows="4"
+          placeholder="Entrer une clé API..."
+        >BFMnNGHK7elJVo7ShUG52UO3w06hrzhFPQsW40q6</textarea>
+  </div> %>
+</div>
+
+
+
