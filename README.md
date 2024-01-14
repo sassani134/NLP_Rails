@@ -17,3 +17,9 @@ fetch
 
 et Voila
 
+# Techno utilisé
+- Ruby
+- Rails
+- Hotwire
+- NLP-API
+- Tailwind css
